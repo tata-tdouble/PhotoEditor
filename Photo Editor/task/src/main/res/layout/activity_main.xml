@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp">
+
+        <Button
+            android:id="@+id/btnGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gallery"/>
+
+        <!-- Small View to separate the buttons -->
+        <View
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tvBrightnessLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brightness : "
+            android:layout_weight="0"
+            android:textSize="16sp"/>
+
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slBrightness"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:valueFrom="-250"
+            android:valueTo="250"
+            android:stepSize="10"
+            android:value="0"
+            android:contentDescription="Brightness control slider"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tvContrastLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contrast : "
+            android:layout_weight="0"
+            android:textSize="16sp"/>
+
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slContrast"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:valueFrom="-250"
+            android:valueTo="250"
+            android:stepSize="10"
+            android:value="0"
+            android:contentDescription="Contrast control slider"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tvSaturationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saturation : "
+            android:layout_weight="0"
+            android:textSize="16sp"/>
+
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slSaturation"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:valueFrom="-250"
+            android:valueTo="250"
+            android:stepSize="10"
+            android:value="0"
+            android:contentDescription="Saturation control slider"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tvGammaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gamma : "
+            android:layout_weight="0"
+            android:textSize="16sp"/>
+
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slGamma"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:valueFrom="0.2"
+            android:valueTo="4.0"
+            android:stepSize="0.2"
+            android:value="1"
+            android:contentDescription="Gamma control slider"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
